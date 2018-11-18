@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+<style>
+*{
+    margin: 0;
+    padding: 0;
+}
+#box{
+    width: 100px;
+    height: 100px;
+    background: violet;
+    top:0;
+    position: absolute;
+}
+
+
+</style>
+</head>
+<body>
+    <div id="box"></div>
+
+<script>
+
+box.onclick = function(){
+    M.move({
+        fx:'elasticBoth',
+        ele:box,
+        attrs:{
+            left:{
+                begin:10,
+                count:'20rem'
+            },
+            top:'200px'
+        }
+    });
+}
+</script>
+
+<script src="js/1.js"></script>
+<script src="js/tween.js"></script>
+</body>
+</html>

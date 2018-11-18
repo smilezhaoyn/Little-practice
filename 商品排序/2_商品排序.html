@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/reset.min.css">
+    <link rel="stylesheet" href="css/index.css">
+<style>
+#list img{
+    opacity: 0;
+    transition: 1s;
+}
+</style>
+</head>
+<body>
+<div class="content">
+    <div class="header">
+        <span>排序</span>
+        <a href="javascript:;" data-kk="time">上架时间
+            <i class="up"></i>
+            <i class="down"></i>
+        </a>
+        <a href="javascript:;" data-kk="hot">热度
+            <i class="up"></i>
+            <i class="down"></i>
+        </a>
+        <a href="javascript:;" data-kk="price">价格
+            <i class="up"></i>
+            <i class="down"></i>
+        </a>
+        <input type="text" placeholder="搜索" id="txt" style="font-size: 10px; height: 25px; width: 200px;padding-left: 10px;">
+        <select id="sele" style="width:100px;font-size: 14px;height:25px;">
+            <option value="hot">热度</option>
+            <option value="price">价格</option>
+            <option value="time">上架时间</option>
+            <option value="title" selected>商品名称</option>
+        </select>
+        <input type="text" placeholder="区间" id="inte1" style="width:40px;font-size: 10px;height:20px;">
+        <span>—</span>
+        <input type="text" placeholder="区间" id="inte2" style="width:40px;font-size: 10px;height:20px;">
+        <button id="search" style="width:40px;font-size: 14px;height:25px;">搜索</button>
+        <button id="reset" style="width:40px;font-size: 14px;height:25px;">重置</button>
+    </div>
+    <ul id="list">
+        <li>
+            <img src="img/1.jpg" alt="">
+            <span>华为畅享7（香槟金）</span>
+            <span>2018-01-01</span>
+            <span>1</span>
+            <span>992</span>
+        </li>
+    </ul>
+</div>
+<!-- 获取数据 -->
+<script src="json/product.js"></script>  
+<!--商品重绘 && 懒加载  &&  点击一些东西  -->
+<script src="js/1.js"></script>
+
+</body>
+</html>
