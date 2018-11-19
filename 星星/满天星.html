@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body{
+            background: #000;
+        }
+    i{
+    /* width: 5px;
+    height: 5px; */
+    /* border: 1px solid #000; */
+    position:absolute;
+    border-radius: 50%;
+    background: url(img/1.png);
+    background-size: cover;
+}
+
+    
+    </style>
+</head>
+<body>
+    <div id="bg">
+        <div id="box"></div>
+    </div>
+
+</div>
+
+<script>
+/*
+    需求：
+        1. 创建i
+        2. 颜色随机
+        3. 大小随机
+        4. 位置随机
+        5. 根据鼠标移动，进行轻微移动
+*/
+
+    let box = document.getElementById('box');
+    let html = '';
+    for(let i = 0;i<300;i++){
+
+        html += `
+        <i></i>
+        `;
+    }
+    box.innerHTML = html;
+
+    let Color = ['#f99ef9','#fa72c8','#3fc8f5','#2b98bc','#98f9e8','#98f998','#41ad41','#5edb21','#e3f23d','#f2ce3d','#f2b43d','#f2963d','#f2413d'];
+    // let Size = [1,2,3,4,5,6,7];
+    // let Wi = [2,3,1,5,4]
+    let Wi = [10,8,15,20]
+  
+
+    let dian = Array.from(document.getElementsByTagName('i'));
+
+    dian.forEach((e,i) => {
+        let size = Wi[Math.floor(Math.random()*Wi.length)];
+        // e.style.background = Color[Math.floor(Math.random()*Color.length)];
+        e.style.left = Math.floor(Math.random()*100) + '%';
+        e.style.top = Math.floor(Math.random()*100) + '%';
+        e.style.width = size+ 'px';
+        e.style.height = size + 'px';
+    });
+
+    // i.style.background = Color[suiji];
+</script>
+</body>
+</html>
